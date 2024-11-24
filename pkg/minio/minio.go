@@ -11,7 +11,7 @@ import (
 	"github.com/minio/minio-go/v7"
 	"github.com/minio/minio-go/v7/pkg/credentials"
 
-	. "go_cloud_storage/pkg/ini"
+	. "go_cloud_storage/pkg/config"
 	"go_cloud_storage/util"
 )
 
@@ -55,8 +55,6 @@ func NewMinioClient() {
 		util.Error(util.H{"Error": err}, "MinIO client connect fail")
 		os.Exit(0)
 	}
-
-	util.Info(nil, "Connect MinIO success")
 }
 
 // 判断存储桶是否存在
@@ -213,4 +211,5 @@ func DeleteObjects(bucketName string, objNames []string) {
 
 func init() {
 	NewMinioClient()
+	LogModuleInit("MinIO")
 }
