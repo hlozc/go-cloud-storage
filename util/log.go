@@ -4,6 +4,7 @@ package util
 
 import (
 	"fmt"
+	config "go_cloud_storage/pkg/ini"
 	"os"
 	"runtime"
 	"strings"
@@ -112,4 +113,5 @@ func Fatal(fields map[string]interface{}, format string, value ...interface{}) {
 
 func init() {
 	logger = newLogger()
+	config.LogModuleInit("Log")
 }
