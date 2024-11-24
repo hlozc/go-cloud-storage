@@ -18,6 +18,7 @@ type Logger struct {
 // 全局日志对象
 var logger *Logger
 
+// 简化一下哈希表的使用
 type H = map[string]interface{}
 
 // 初始化 logrus 日志对象
