@@ -4,7 +4,7 @@ package util
 
 import (
 	"fmt"
-	config "go_cloud_storage/pkg/ini"
+	"go_cloud_storage/pkg/config"
 	"os"
 	"runtime"
 	"strings"
